@@ -1,0 +1,16 @@
+!_TAG_FILE_SORTED	2	/0=unsorted, 1=sorted, 2=foldcase/
+add	/home/xiaoxuan/workspace/js-data-structure-notes/Dictionary.js	/^function add(key, value) {$/;"	c	language:JavaScript
+betterHash	/home/xiaoxuan/workspace/js-data-structure-notes/HashTable.js	/^function betterHash(string) {$/;"	f	language:JavaScript
+clear	/home/xiaoxuan/workspace/js-data-structure-notes/Dictionary.js	/^function clear() {$/;"	c	language:JavaScript
+count	/home/xiaoxuan/workspace/js-data-structure-notes/Dictionary.js	/^function count() {$/;"	f	language:JavaScript
+Dictionary	/home/xiaoxuan/workspace/js-data-structure-notes/Dictionary.js	/^function Dictionary() {$/;"	c	language:JavaScript
+find	/home/xiaoxuan/workspace/js-data-structure-notes/Dictionary.js	/^function find(key) {$/;"	f	language:JavaScript
+HashTable	/home/xiaoxuan/workspace/js-data-structure-notes/HashTable.js	/^function HashTable() {$/;"	c	language:JavaScript
+put	/home/xiaoxuan/workspace/js-data-structure-notes/HashTable.js	/^function put(data) {$/;"	c	language:JavaScript
+remove	/home/xiaoxuan/workspace/js-data-structure-notes/Dictionary.js	/^function remove(key) {$/;"	f	language:JavaScript
+return	/home/xiaoxuan/workspace/js-data-structure-notes/Dictionary.js	/^function count() {$/;"	c	language:JavaScript
+showAll	/home/xiaoxuan/workspace/js-data-structure-notes/Dictionary.js	/^function showAll(isOrdered) {$/;"	f	language:JavaScript
+showDistro	/home/xiaoxuan/workspace/js-data-structure-notes/HashTable.js	/^function showDistro() {$/;"	f	language:JavaScript
+simpleHash	/home/xiaoxuan/workspace/js-data-structure-notes/HashTable.js	/^function simpleHash(data) {$/;"	f	language:JavaScript
+slice	/home/xiaoxuan/workspace/js-data-structure-notes/Dictionary.js	/^  return Array.prototype.slice.call(Object.keys(this.datastore)).length; $/;"	m	language:JavaScript	class:return
+someNames	/home/xiaoxuan/workspace/js-data-structure-notes/HashTable.js	/^var someNames = ["Divid", "Jennifer", "Donnie", "Raymond", "Cynthia", "Mike", $/;"	v	language:JavaScript
