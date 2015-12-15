@@ -39,6 +39,7 @@ function HashTable() {
   this.simpleHash = simpleHash;
   this.betterHash = betterHash;
   this.showDistro = showDistro;
+  this.buildChains = buildChains; // 开链法
   this.put = put;
   // this.get = get;
 }
@@ -107,25 +108,90 @@ function betterHash(string) {
   return parseInt(total, 10);
 }
 
+// 散列化整型键
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
+function getStuData(arr) {
+  for (var i = 0; i < arr.length; ++i) {
+    var num = '';
+    for (var j = 1; j <= 9; j++) {
+      num += Math.floor(Math.random() * 10);
+    }
+    num += getRandomInt(50, 100);
+    arr[i] = num;
+  }
+}
 
+// 存储数据到散列表
+function put(key, data) {
+  var pos = this.betterHash(key);
+  this.table[pos] = data;
+}
 
+function get(key) {
+  return this.table[this.betterHash(key)];
+}
 
+// 碰撞处理
+// 当散列函数对于多个输入产生同样的输出时，就产生了碰撞，散列算法的第二部分就是将
+// 介绍如何解决碰撞，使所有的键都得以存储在散列表中，本节将讨论两种碰撞解决办法，
+// 开链法和线性探测法
 
+// 开链法
+// 当碰撞发生时，我们仍然希望将键通过散列算法产生的索引位置上，但实际上不可能将多份
+// 数据存到一个数组单元中。开链法是指实现散列表的底层数组中，每个数组元素又是一个新的数据
+// 结构，比如另一个数组，这样就能存储多个键了。使用这种技术，即使两个键散列后的值相同，
+// 依然被保存在同一个位置，只不过它们在第二个数组中的位置不同。
 
+// 开链法,加入HashTable类
+function buildChains() {
+  for (var i = 0, len = this.table.length; i < len; i++) {
+    this.table[i] = new Array(); 
+  }
+}
 
+/*
+ * 线性探测法
+ * 线性探测法隶属于一种更一般的散列技术：开放寻址散列，当发生碰撞时，线性探测法检测
+ * 散列表的下一个位置是否为空，如果为空，就将数据存入该位置：如果不为空，则继续检查
+ * 下一个位置，直到找到了一个空的位置为止，该技术是基于这样一个事实：每个散列表都会
+ * 有很多空的单元格，可以使用它们来存储数据。
+ * 当存储数据使用的数组特别大时，选择线性探测法要比开链法好，这里有个公式，常常可以
+ * 帮助我们选择使用哪种碰撞解决办法：如果数组大大小是存储数据个数的1.5倍，那么使用开
+ * 链法；如果数组的大小是带存储数据的2倍以上，那么推荐使用线性探测法。
+ *
+ * 为了说明线性探测法的工作原理，可以重写put和get方法。为了实现一个真实的数据存储系统
+ * ，需要为HashTable类增加一个新的数组，用来存储数据，数组table和values并行工作，当将
+ * 一个键值保存到table中时，将数据存入数组values中相应的位置上。
+ */
 
+this.values = [];
 
+function put(key, data) {
+  var pos = this.betterHash(key);
+  if (this.table[pos] == void 0) {
+    this.table[pos] = key;
+    this.values[pos] = data;
+  } else {
+    while (this.table[pos] != void 0) {
+      pos++;
+    }
+    this.table[pos]  = key;
+    this.value[pos] = data;
+  }
+}
 
-
-
-
-
-
-
-
-
-
-
-
+function get(key) {
+  var hash = -1;
+  hash = this.betterHash(key);
+  if (hash > -1) {
+    for (var i = hash; this.table[hash] != undefined; i++) {
+      if (this.table[hash] === key) {
+        return this.values[hash];
+      } 
+    }
+  }
+}
 
