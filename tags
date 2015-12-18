@@ -1,12 +1,14 @@
 !_TAG_FILE_SORTED	2	/0=unsorted, 1=sorted, 2=foldcase/
 add	/home/xiaoxuan/workspace/js-data-structure-notes/Dictionary.js	/^function add(key, value) {$/;"	c	language:JavaScript
 add	/home/xiaoxuan/workspace/js-data-structure-notes/Set.js	/^function add() {$/;"	f	language:JavaScript
+addEdge	/home/xiaoxuan/workspace/js-data-structure-notes/Graph.js	/^function addEdge(v, w) {$/;"	c	language:JavaScript
 betterHash	/home/xiaoxuan/workspace/js-data-structure-notes/HashTable.js	/^function betterHash(string) {$/;"	f	language:JavaScript
 BST	/home/xiaoxuan/workspace/js-data-structure-notes/Tree.js	/^function BST() {$/;"	c	language:JavaScript
 buildChains	/home/xiaoxuan/workspace/js-data-structure-notes/HashTable.js	/^function buildChains() {$/;"	f	language:JavaScript
 clear	/home/xiaoxuan/workspace/js-data-structure-notes/Dictionary.js	/^function clear() {$/;"	c	language:JavaScript
 contains	/home/xiaoxuan/workspace/js-data-structure-notes/Set.js	/^function contains(data) {$/;"	f	language:JavaScript
 count	/home/xiaoxuan/workspace/js-data-structure-notes/Dictionary.js	/^function count() {$/;"	f	language:JavaScript
+Craph	/home/xiaoxuan/workspace/js-data-structure-notes/Graph.js	/^function Craph(v) {$/;"	c	language:JavaScript
 Dictionary	/home/xiaoxuan/workspace/js-data-structure-notes/Dictionary.js	/^function Dictionary() {$/;"	c	language:JavaScript
 difference	/home/xiaoxuan/workspace/js-data-structure-notes/Set.js	/^function difference(set) {$/;"	f	language:JavaScript
 find	/home/xiaoxuan/workspace/js-data-structure-notes/Dictionary.js	/^function find(key) {$/;"	f	language:JavaScript
@@ -35,9 +37,11 @@ show	/home/xiaoxuan/workspace/js-data-structure-notes/Set.js	/^function show() {
 show	/home/xiaoxuan/workspace/js-data-structure-notes/Tree.js	/^function show() {$/;"	f	language:JavaScript
 showAll	/home/xiaoxuan/workspace/js-data-structure-notes/Dictionary.js	/^function showAll(isOrdered) {$/;"	f	language:JavaScript
 showDistro	/home/xiaoxuan/workspace/js-data-structure-notes/HashTable.js	/^function showDistro() {$/;"	f	language:JavaScript
+showGraph	/home/xiaoxuan/workspace/js-data-structure-notes/Graph.js	/^function showGraph() {$/;"	f	language:JavaScript
 simpleHash	/home/xiaoxuan/workspace/js-data-structure-notes/HashTable.js	/^function simpleHash(data) {$/;"	f	language:JavaScript
 size	/home/xiaoxuan/workspace/js-data-structure-notes/Set.js	/^function size() {$/;"	f	language:JavaScript
 slice	/home/xiaoxuan/workspace/js-data-structure-notes/Dictionary.js	/^  return Array.prototype.slice.call(Object.keys(this.datastore)).length; $/;"	m	language:JavaScript	class:return
 someNames	/home/xiaoxuan/workspace/js-data-structure-notes/HashTable.js	/^var someNames = ["Divid", "Jennifer", "Donnie", "Raymond", "Cynthia", "Mike", $/;"	v	language:JavaScript
 subset	/home/xiaoxuan/workspace/js-data-structure-notes/Set.js	/^function subset(set) {$/;"	f	language:JavaScript
 union	/home/xiaoxuan/workspace/js-data-structure-notes/Set.js	/^function union(set) {$/;"	f	language:JavaScript
+Vertex	/home/xiaoxuan/workspace/js-data-structure-notes/Graph.js	/^function Vertex(label,wasVisited) {$/;"	c	language:JavaScript
